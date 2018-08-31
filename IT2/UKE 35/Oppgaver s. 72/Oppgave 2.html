@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 2</title>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="400"></canvas>
+
+<script>
+    var canvas = document.getElementById("canvas");
+
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "green";
+    ctx.fillRect(30,30,50,50);
+
+    ctx.strokeStyle = "red";
+    ctx.moveTo(30,30);
+    ctx.lineTo(30,80);
+    ctx.stroke();
+
+    ctx.moveTo(30,30);
+    ctx.lineTo(80,30);
+    ctx.stroke();
+
+    ctx.moveTo(80,30);
+    ctx.lineTo(80,80);
+    ctx.stroke();
+
+    ctx.moveTo(30,80);
+    ctx.lineTo(80,80);
+    ctx.stroke();
+
+</script>
+
+
+
+</body>
+</html>

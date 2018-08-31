@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<canvas id="mycanvas" width="400" height="300"></canvas>
+
+
+
+
+<script>
+
+    var mycanvas = document.getElementById("mycanvas");
+
+    var ctx = mycanvas.getContext("2d");
+
+    ctx.fillRect(30,60,70,50);  // Tegner en firkant.
+
+    ctx.fillRect(100,100,150,150);  // Tegner en firkant
+
+    ctx.fillStyle = "red";  // Angir fargen rød til alt under.
+
+    ctx.fillRect(150,150,150,150);
+
+    ctx.strokeStyle = "cadetblue";  //Endrer fargen på streken.
+    ctx.moveTo(15,15);  // Flytter "pennen" til 15,15
+    ctx.lineTo(200,200);  //Der hvor streken skal gå
+    ctx.stroke()  // Tegner streken
+
+</script>
+
+</body>
+</html>
