@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+
+    <style>
+
+        body{
+            background: cadetblue;
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<p>Pluss</p>
+<input type="number" id="inp1" placeholder="Nummer">
+<input type="number" id="inp2" placeholder="Nummer">
+<span id="svar"></span>
+<br>
+<button id="btn">Regn ut</button>
+
+<p>Minus</p>
+
+<input type="number" id="inpMinus" placeholder="Nummer">
+<input type="number" id="Minus" placeholder="Nummer">
+<span id="svar2"></span>
+<br>
+<button id="btn2">Regn ut</button>
+
+<p>Gange</p>
+
+<input type="number" id="inpGange" placeholder="Nummer">
+<input type="number" id="Gange" placeholder="Nummer">
+<span id="svar3"></span>
+<br>
+<button id="btn3">Regn ut</button>
+
+<p>Dele</p>
+
+<input type="number" id="inpDele" placeholder="Nummer">
+<input type="number" id="Dele" placeholder="Nummer">
+<span id="svar4"></span>
+<br>
+<button id="btn4">Regn ut</button>
+
+<script>
+
+    var inp1 = document.getElementById("inp1");
+    var inp2 = document.getElementById("inp2");
+    var svar = document.getElementById("svar");
+    var btn = document.getElementById("btn");
+
+    btn.onclick = function () {
+        svar.innerHTML = Number(inp1.value) + Number(inp2.value);
+    };
+
+
+    var inpMinus = document.getElementById("inpMinus");
+    var Minus = document.getElementById("Minus");
+    var svar2 = document.getElementById("svar2");
+    var btn2 = document.getElementById("btn2");
+
+    btn2.onclick = function () {
+        svar2.innerHTML = Number(inpMinus.value) - Number(Minus.value);
+    };
+
+
+
+    var inpGange = document.getElementById("inpGange");
+    var Gange = document.getElementById("Gange");
+    var svar3 = document.getElementById("svar3");
+    var btn3 = document.getElementById("btn3");
+
+    btn3.onclick = function () {
+        svar3.innerHTML = Number(inpGange.value) * Number(Gange.value);
+    };
+
+    var inpDele = document.getElementById("inpDele");
+    var Dele = document.getElementById("Dele");
+    var svar4 = document.getElementById("svar4");
+    var btn4 = document.getElementById("btn4");
+
+    btn4.onclick = function () {
+        svar4.innerHTML = Number(inpDele.value) / Number(Dele.value);
+    };
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firkant</title>
+
+    <style>
+
+        #minFirkant {
+            background: cadetblue;
+            width: 200px;
+            height: 200px;
+            transition: 0.5s;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<input type="range" id="inpStørrelse" min="0" max="1000">
+<input type="range" id="høyde" min="0" max="1000">
+
+<div id="minFirkant"></div>
+
+
+<script>
+
+    var inpStørrelse = document.getElementById("inpStørrelse");
+    var minFirkant = document.getElementById("minFirkant");
+    var høyde = document.getElementById("høyde");
+
+
+      inpStørrelse.onmousemove = function () {
+        minFirkant.style.width = inpStørrelse.value + "px";
+    }
+
+    høyde.onmousemove = function () {
+        minFirkant.style.height = høyde.value + "px";
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>

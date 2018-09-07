@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 1</title>
+</head>
+<body>
+
+<h1>Kalkulator</h1>
+
+<input type="number" id="inpTall">
+
+<input type="number" id="inp">
+
+<span id="spnResultat"></span>
+
+
+
+<script>
+
+    var inpTall = document.getElementById("inpTall");
+    var inp = document.getElementById("inp");
+    var spnResultat = document.getElementById("spnResultat");
+    var btn = document.getElementById("btn");
+
+   onkeyup = function(){
+        spnResultat.innerHTML = Number(inpTall.value) + Number(inp.value);
+    }
+
+
+</script>
+
+</body>
+</html>
