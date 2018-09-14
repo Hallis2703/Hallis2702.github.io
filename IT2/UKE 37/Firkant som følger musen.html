@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firkant Morsom Ting</title>
+
+    <style>
+
+        body{
+            cursor: none;
+        }
+
+        #firkant{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            margin-left: 400px;
+            margin-top: 400px;
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="firkant"></div>
+
+
+<script>
+
+    var firkant = document.getElementById("firkant");
+
+    document.onmousemove = function(){
+        var x = event.clientX - 100;
+        var y = event.clientY - 100;
+        console.log("x=" + x);
+        console.log("y=" + y);
+
+        firkant.style.marginLeft = x + "px";
+        firkant.style.marginTop = y + "px";
+
+    }
+
+</script>
+
+</body>
+</html>
