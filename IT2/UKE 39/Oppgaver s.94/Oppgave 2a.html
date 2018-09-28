@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="250"></canvas>
+
+<script>
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    for (var i = 0; i <= 50; i++) {
+        for (var j = 0; j <= 100; j++){
+            ctx.beginPath();
+            ctx.arc(i*10,j*10,2,0,2*Math.PI);
+            ctx.arc(i*8,j*8,20,0,2*Math.PI);
+            ctx.stroke()
+        }
+    }
+    
+
+</script>
+
+</body>
+</html>
