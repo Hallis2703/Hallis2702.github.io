@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body{
+            background-color: cadetblue;
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            margin-left: 10px;
+            background-color: antiquewhite;
+        }
+
+        image{
+
+        }
+        h1{
+            background-color: antiquewhite;
+        }
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<h1>BILDELISTE</h1>
+
+<img src="harald.png" width="600" height="600" id="bilde">
+<br>
+<button id="forrige">Forrige</button>
+<button id="neste">Neste</button>
+<button id="tilfeldig">Tilfeldig Bilde</button>
+
+
+
+<script>
+
+var bilde = document.getElementById("bilde");
+
+var neste = document.getElementById("neste");
+
+var forrige = document.getElementById("forrige");
+
+var tilfeldig = document.getElementById("tilfeldig");
+
+let bildeListe = ["briller.png", "harald.png", "meg.jpg","meg02.jpg"];
+
+let n = 0;
+
+neste.onclick = function () {
+    n++;
+    if (n > 2) {
+        n = 0
+    }
+    bilde.src = bildeListe[n];
+}
+
+forrige.onclick = function () {
+    n--;
+    if (n < 0){
+        n = 2;
+    }
+    bilde.src = bildeListe[n];
+}
+
+tilfeldig.onclick = function () {
+    bilde.src = bildeListe[Math.floor(Math.random()*bildeListe.length)];
+}
+
+</script>
+
+
+
+</body>
+</html>

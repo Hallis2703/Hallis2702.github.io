@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var hemmeligTall = Math.floor(Math.random()*100)+1;
+    var gjett = Number(prompt("Gjett et tall mellom 1 og 100 :)"));
+    
+    while (gjett !== hemmeligTall) {
+
+        if (gjett < hemmeligTall){
+            gjett = Number(prompt("Du har gjettet for lavt. Prøv igjen :)"));
+            console.log("Du gjettet for lavt.");
+        }
+        else {
+            gjett = Number(prompt("Du har gjettet for høyt. Prøv igjen :)"));
+            console.log("Du gjettet for høyt.");
+        }
+
+    }
+    alert("Riktig! Du vant <3");
+
+
+</script>
+
+
+
+</body>
+</html>

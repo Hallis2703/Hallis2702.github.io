@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="600"></canvas>
+
+<script>
+
+    var canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+function fibonacci() {
+
+
+    var fib = [1, 1];
+
+    for (var i = 2; i < 100; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2]
+    }
+    return fib;
+}
+
+var tiTall = fibonacci(10);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

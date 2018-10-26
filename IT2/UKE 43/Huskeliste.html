@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Huskeliste</title>
+</head>
+<body>
+
+
+<div>
+    <input type="text" id="inpLeggTil" placeholder="Ting jeg må huske">
+    <button id="button">Legg til</button>
+</div>
+<div id="divListe">
+    <ul id="ulListe"></ul>
+        <li>Husk å være awesome.</li>
+    </ul>
+</div>
+
+
+<script>
+
+    const inpLeggTil = document.getElementById("inpLeggTil");
+    const button = document.getElementById("button");
+    const ulListe = document.getElementById("ulListe");
+
+    button.onclick = function () {
+        leggTilPunkt(inpLeggTil.value);
+        inpLeggTil.value = "";
+    }
+
+    function leggTilPunkt(tekst) {
+        ulListe.innerHTML += "<li>" + tekst + "</li>";
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>
