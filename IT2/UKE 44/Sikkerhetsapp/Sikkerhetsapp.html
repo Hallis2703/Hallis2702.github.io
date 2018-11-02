@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stilark.css">
+</head>
+<body>
+
+    <main>
+        <div id="app">
+            <div id="tall"></div>
+            <div id="knapper">
+                <button class="knapp" id="pluss">+</button>
+                <button class="knapp" id="minus">-</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+
+        const pluss = document.getElementById("pluss");
+        const minus = document.getElementById("minus");
+        const tall = document.getElementById("tall");
+
+        let antall = 0;
+        tall.innerHTML = antall;
+
+        pluss.onclick = leggTil;
+        minus.onclick = trekkFra;
+
+        window.onkeydown = function (event) {
+            if (event.code === "ArrowUp"){
+                leggTil();
+            }
+            else if (event.code === "ArrowDown"){
+                trekkFra();
+            }
+        }
+        
+        function leggTil() {
+            antall++;
+            
+            if (antall > 54 && antall < 60) {
+                tall.innerHTML = antall + "!";
+                tall.style.color = "red";
+            }
+            else if (antall > 60){
+                tall.innerHTML = antall;
+                tall.style.color = "red" + "!";
+                alert("FARE! DET ER OVER 60 STYKKER");
+
+            }
+            else {
+                tall.innerHTML = antall;
+                tall.style.color = "black";
+            }
+        }
+
+        function trekkFra() {
+            antall--;
+
+            if (antall > 60){
+                tall.innerHTML = antall + "!";
+                tall.style.color = "red";
+            }
+            else if (antall > 54){
+                tall.innerHTML = antall + "!";
+                tall.style.color = "red";
+            }
+            else {
+                tall.innerHTML = antall;
+                tall.style.color = "black";
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
