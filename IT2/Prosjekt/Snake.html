@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Snake</title>
+
 
     <style>
 
@@ -10,13 +11,44 @@
             text-align: center;
             margin-top: 100px;
             background-color: black;
+        }
+        canvas{
+            border: solid 4px red;
+        }
+        h1{
+            font-size: 20px;
+            color: red;
+            text-align: left;
+
+        }
+        p{
+            font-size: 15px;
+            color:red;
+            text-align: left;
 
         }
 
+
+
+
     </style>
+
 </head>
 <body>
-<canvas id="gc" width="400" height="400"></canvas>
+
+<h1> SNAKE </h1>
+<p> Bruk piletastene til å bevege slangen. </p>
+<p> Fang de røde eplene uten å treffe deg selv </p>
+<br>
+<p> PS best i fullskjerm! </p>
+
+<canvas id="gc" width="900" height="900"></canvas>
+
+
+
+
+
+
 <script>
     window.onload=function() {
         canv=document.getElementById("gc");
@@ -25,7 +57,7 @@
         setInterval(game,1000/11);
     }
     px=py=10;
-    gs=tc=20;
+    gs=tc=30;
     ax=ay=15;
     xv=yv=0;
     trail=[];
@@ -84,6 +116,14 @@
                 break;
         }
     }
+
+
+
+
 </script>
+
+
+
+
 </body>
 </html>

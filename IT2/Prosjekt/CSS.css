@@ -7,15 +7,23 @@ body{
 h1 {
     color: white;
 }
-div{
+div {
     display: inline-block;
     padding: 40px;
     margin-top: 100px;
-    height: 100px;
-    width: 100px;
-    background-color: cadetblue;
-    border-radius: 10%;
+    height: 600px;
+    width: 600px;
+    background-color: dimgrey;
+    border-radius: 5%;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
 }
+div:hover{
+    background-color: cadetblue;
+}
+
+
+
 
 
 
