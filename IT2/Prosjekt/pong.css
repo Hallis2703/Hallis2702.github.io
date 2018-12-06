@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+canvas{
+    border: solid 3px red;
+}
+div{
+    background-color: red;
+    width: 603px;
+    font-family: 'Playfair Display', serif;
+}
+p{
+    color: red;
+}
+button{
+
+}
+
