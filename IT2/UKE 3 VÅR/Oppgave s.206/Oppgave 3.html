@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 3</title>
+
+    <style>
+
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            border-radius: 20%;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<img id="bilde">
+
+
+<button id="forrige">Forrige</button>
+<button id="neste">Neste</button>
+
+
+<script>
+
+    let neste = document.getElementById("neste");
+    let forrige = document.getElementById("forrige");
+    let bilde = document.getElementById("bilde");
+
+    let bildeListe = ["blomst.JPG", "dråper.JPG", "hund.JPG", "person.JPG"];
+
+    let i = 0;
+
+
+
+    neste.onclick = function () {
+        i++;
+        //console.log(i);
+        if (i === bildeListe.length){
+            i = 0;
+        }
+        //console.log(i);
+        bilde.src = bildeListe[i];
+    }
+
+    forrige.onclick = function () {
+        i--;
+        console.log(i);
+        if (i < 0){
+            i = bildeListe.length - 1;
+        }
+        bilde.src = bildeListe[i];
+        console.log(i);
+    }
+
+    bilde.src = bildeListe[i];
+
+    bildeListe.sort();
+
+</script>
+
+
+
+</body>
+</html>

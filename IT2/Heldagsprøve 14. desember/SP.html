@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SP</title>
+    <style>
+        body{
+            background-color: dimgray;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        button{
+            height: 30px;
+            width: 50px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Senterpartiet</h1>
+
+<p>19 Stortingsrepresentant</p>
+<p>Vi tror på hele Norge</p>
+
+<br>
+
+<img src="Bilder/sp01.jpg" id="bilde" width="400" height="400">
+<br>
+<button id="neste">Neste</button>
+
+
+
+<script>
+
+    var neste = document.getElementById("neste");
+    var bilde = document.getElementById("bilde");
+
+    let bildeListe = ["Bilder/sp01.jpg","Bilder/sp02.jpg", "Bilder/sp03.jpg"];
+
+    let n = 0;
+
+    neste.onclick = function () {
+        n++;
+        if (n > 2) {
+            n = 0
+        }
+        bilde.src = bildeListe[n];
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

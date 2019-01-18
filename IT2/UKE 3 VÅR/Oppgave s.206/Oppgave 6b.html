@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 6b</title>
+</head>
+<body>
+
+
+<select id="farge">
+    <option>Grå</option>
+    <option>Blå</option>
+    <option>Rød</option>
+    <option>Lilla</option>
+    <option>Rosa</option>
+    <option>Turkis</option>
+</select>
+
+<button id="btn">Velg farge</button>
+<p id="tekst"></p>
+
+<script>
+
+    let farge = document.getElementById("farge");
+    let btn = document.getElementById("btn");
+    let tekst = document.getElementById("tekst");
+
+    let array = [];
+
+    btn.onclick = function () {
+                            array.push(farge.value);
+                            tekst.innerHTML =  "Du har valgt fargene" + array.join(",");
+    }
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 3</title>
+</head>
+<body>
+
+<input id="pris" type="number">
+<span id="resultat"></span>
+
+<br>
+
+<button id="button">Regn ut</button>
+
+
+<script>
+
+var pris = document.getElementById("pris");
+var button = document.getElementById("button");
+var resultat = document.getElementById("resultat");
+
+    button.onclick = function () {
+        if (pris.value >= 350) {
+            resultat.innerHTML = 158 + pris.value * 1.25;
+        }
+        else if (pris.value < 350 )
+            resultat.innerHTML = pris.value;
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

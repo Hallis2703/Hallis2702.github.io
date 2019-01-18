@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong</title>
+
+    <link rel="stylesheet" href="pong.css">
+
+</head>
+<body>
+
+<div id="divPoeng">
+    <h1 id="hdpoeng">Poeng:0</h1>
+    <h1 id="rekord">Rekord:0</h1>
+</div>
+
+<canvas id="canvas" width="500" height="400"></canvas>
+
+<br>
+
+<button onclick="myFunction ()">Restart</button>
+
+
+<p>Bruk piltastene opp og ned for å styre racketten. Holde ballen borte fra siden, og prøv å få så mange poeng som mulig.</p>
+
+<p>Trykk på knappen for å starte på nytt.</p>
+
+<script>
+    
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var theGameIsOn = true;
+
+    var bane ={
+        bredde: canvas.width,
+        hoyde: canvas.height,
+        farge: "black",
+    };
+
+    var ball = {
+        radius: 7,
+        xpos: 100,
+        ypos: 100,
+        farge: "lime",
+        xretning: -1,
+        yretning: 1,
+        xfart: 7,
+        yfart:7
+    };
+
+    var racket = {
+        "bredde": 10,
+        "hoyde": 50,
+        "farge": "lime",
+        "xpos": bane.bredde - 15,
+        "ypos": bane.hoyde / 2,
+        "yretning": 0,
+        "yfart": 10
+    };
+
+
+
+    var hdpoeng = document.getElementById("hdpoeng");
+    var rekord = document.getElementById("rekord");
+    var poeng = 0;
+    if (localStorage.rekord === undefined){
+        localStorage.rekord = 0;
+    }
+    rekord.innerHTML = "Rekord:" + localStorage.rekord;
+
+    function tegnBane() {
+        ctx.fillStyle = bane.farge;
+        ctx.fillRect(0, 0, bane.bredde, bane.hoyde);
+    }
+    function tegnBall() {
+        ctx.beginPath();
+        ctx.arc(ball.xpos, ball.ypos, ball.radius, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = ball.farge;
+        ctx.fill();
+        ball.xpos = ball.xpos + ball.xfart * ball.xretning;
+        ball.ypos = ball.ypos + ball.yfart * ball.yretning;
+    }
+    function tegnRacket() {
+        ctx.fillStyle = racket.farge;
+        ctx.fillRect(racket.xpos, racket.ypos, racket.bredde, racket.hoyde);
+        if (racket.ypos <= 0 && racket.yretning === -1){
+            return;
+        }
+        if (racket.ypos + racket.hoyde  >= bane.hoyde && racket.yretning === 1){
+            return;
+        }
+        racket.ypos = racket.ypos + (racket.yfart * racket.yretning);
+    }
+
+    function ballTreffeVegg() {
+        if (ball.xpos <= ball.radius){
+            ball.xretning = 1;
+        }
+        if (ball.ypos + ball.radius >= bane.hoyde){
+            ball.yretning = -1;
+        }
+        if (ball.ypos <= ball.radius){
+            ball.yretning = 1;
+        }
+    }
+
+    function ballTreffeRacket() {
+        var tilVenstre = ball.xpos + ball.radius < racket.xpos;
+        var tilHoyre = ball.xpos - ball.radius > racket.xpos + racket.bredde;
+        var over = ball.ypos + ball.radius < racket.ypos;
+        var under = ball.ypos - ball.radius > racket.ypos + racket.hoyde;
+
+        if (!tilVenstre && !tilHoyre && !over && !under) {
+            ball.xretning = -1;
+            poeng = poeng + 1;
+            hdpoeng.innerHTML = "Poeng:" + poeng;
+            if (poeng > localStorage.rekord) {
+                localStorage.rekord = poeng;
+                rekord.innerHTML = "Ny Rekord:" + poeng;
+                rekord.style.color = "lime";
+            }
+        }
+    }
+
+    function ballUtenforBanen() {
+        if (ball.x > bane.bredde + ball.radius * 2){
+            theGameIsOn = false
+        }
+    }
+
+    function gameLoop() {
+        tegnBane();
+        tegnBall();
+        tegnRacket();
+        ballTreffeVegg();
+        ballTreffeRacket();
+        ballUtenforBanen();
+        if (theGameIsOn){
+            requestAnimationFrame(gameLoop);
+        }
+    }
+    gameLoop();
+
+
+    document.onkeydown = function (evt) {
+        var tastekode = evt.keyCode;
+        if (tastekode === 38){
+            racket.yretning = -1;
+        }
+        if (tastekode === 40){
+            racket.yretning = 1;
+        }
+    }
+
+    document.onkeyup = function (evt) {
+        var tastekode = evt.keyCode;
+
+        if (tastekode === 38 && racket.yretning === -1){
+            racket.yretning = 0;
+        }
+        if (tastekode === 40 && racket.yretning === 1){
+            racket.yretning = 0;
+        }
+    }
+
+    function myFunction() {
+        location.reload();
+    }
+
+</script>
+
+
+
+</body>
+</html>

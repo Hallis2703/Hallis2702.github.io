@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 4</title>
+</head>
+<body>
+
+<button id="button">Ny tilfeldig person</button>
+<br>
+<span id="resultat"></span>
+<br>
+<img src="Bilder/ung.jpg" id="bilde">
+
+
+
+
+<script>
+
+    var button = document.getElementById("button");
+    var bilde = document.getElementById("bilde");
+    var alder = Math.floor(Math.random()*70) + 1;
+
+    button.onclick = function () {
+                // Her skal det stå en funksjon som jeg ikke klarte. Hadde jeg klart den, hadde det applikasjonen funket.
+    }
+
+
+        if (alder.value < 15) {
+            document.write("Ikke for smårollinger, minst 15 år!");
+        }
+        else if (alder.value > 60) {
+            document.write("Ikke for gamlinger, maks 60 år");
+            bilde.src = "Bilder/gammel.jpg";
+        }
+        else {
+            document.write(alder.value + "år! Gratulerer, du er akkurat passe gammel!");
+            bilde.src = "Bilder/passe.jpg";
+        }
+
+
+    
+    
+
+</script>
+
+
+</body>
+</html>

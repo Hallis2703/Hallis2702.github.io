@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MDG</title>
+
+    <style>
+        body{
+            background-color: dimgray;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        img{
+
+        }
+        button{
+            height: 30px;
+            width: 50px;
+            border-radius: 10%;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Miljøpartiet de grønne</h1>
+
+<p>1 Stortingsrepresentant</p>
+<p>Ta vare på fremtiden</p>
+
+<br>
+
+<img src="Bilder/mdg01.jpg" id="bilde" width="400" height="400">
+<br>
+<button id="neste">Neste</button>
+
+
+
+<script>
+    
+    var neste = document.getElementById("neste");
+    var bilde = document.getElementById("bilde");
+
+    let bildeListe = ["Bilder/mdg01.jpg","Bilder/mdg02.jpg", "Bilder/mdg03.jpg"];
+
+    let n = 0;
+
+    neste.onclick = function () {
+            n++;
+            if (n > 2) {
+                n = 0
+            }
+            bilde.src = bildeListe[n];
+        }
+
+    
+    
+</script>
+
+
+
+</body>
+</html>
