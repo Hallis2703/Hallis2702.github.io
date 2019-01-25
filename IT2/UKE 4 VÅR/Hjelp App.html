@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hjelp App</title>
+
+    <style>
+        button{
+            border-radius: 30%;
+            border: solid 3px black;
+            width: 100px;
+            height: 50px;
+        }
+        input{
+            width: 100px;
+            height: 50px;
+            border: solid 1px black;
+        }
+    </style>
+
+</head>
+<body>
+
+<input type="text" id="inpNavn" placeholder="Navn">
+<br>
+<br>
+<input type="text" id="inpProblem" placeholder="Problem">
+<br>
+<br>
+<button id="btn">Trykk her</button>
+<P>Du kan også trykke på enter.</P>
+
+<script>
+
+    let inpNavn = document.getElementById("inpNavn");
+    let inpProblem = document.getElementById("inpProblem");
+    let btn = document.getElementById("btn");
+
+    btn.onclick = function () {
+        let div = document.createElement("div");
+        div.style.backgroundColor = "cadetblue";
+        div.style.width = 400 + "px";
+        div.style.height = 100 + "px";
+        div.style.margin = 5 + "px";
+        document.body.appendChild(div);
+        div.innerHTML = "Navn:" + `<br>` + inpNavn.value + `<br>` + `<br>` + "Ditt problem er:" + `<br>` + inpProblem.value;
+    }
+
+    window.onkeydown = function (event) {
+        if (event.code === "Enter") {
+            let div = document.createElement("div");
+            div.style.backgroundColor = "cadetblue";
+            div.style.width = 400 + "px";
+            div.style.height = 100 + "px";
+            div.style.margin = 5 + "px";
+            document.body.appendChild(div);
+            div.innerHTML = "Navn:" + `<br>` + inpNavn.value + `<br>` + `<br>` + "Ditt problem er:" + `<br>` + inpProblem.value;
+        }
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>
