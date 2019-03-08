@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cokkie clicker</title>
+    <style>
+        #bilde{
+            position: absolute;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="weird_face.png" id="bilde">
+
+<div id="poeng"></div>
+
+<script>
+
+let bilde = document.querySelector("#bilde");
+let divPoeng = document.querySelector("#poeng");
+
+let poeng = 0;
+
+/*
+bilde.onclick = function () {
+    poeng += 1;
+    poeng.innerHTML = "Poeng:" + poeng;
+}
+*/
+
+//Hendelslyttere
+    bilde.onclick = gameLoop;
+    window.onkeydown = merpoeng;
+
+    function gameLoop() {
+        merpoeng();
+        flyttBilde();
+    }
+
+    function merpoeng(){
+        poeng += 1;
+        divPoeng.innerHTML = `Poeng: ${poeng}`;
+    }
+
+    function flyttBilde() {
+        let x = Math.random()*(window.innerWidth - 100);
+        let y = Math.random()*(window.innerHeight - 100);
+        bilde.style.left =  x + "px";
+        bilde.style.right = y + "px";
+    }
+
+</script>
+
+</body>
+</html>

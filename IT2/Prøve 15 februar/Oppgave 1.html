@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 1</title>
+    <style>
+        #ramme{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        img{
+            position: absolute;
+            height: 200px;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="ramme">
+    <img src="vedlegg/dyr.png">
+</div>
+
+<script>
+
+const imgDyr = document.querySelector("img");
+
+let dyrCSS = [
+    {
+       right:"0px"
+    },
+    {
+        right:"-1150px"
+    }
+];
+
+    let dyrEgenskaper = {
+        duration: 1500,
+        iterations: Infinity,
+        easing: "steps(4)"
+    };
+
+imgDyr.animate(dyrCSS, dyrEgenskaper);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasjon</title>
+    <style>
+        body{
+            background-image: url("Bilder/universe.png");
+        }
+        button{
+            width: 50px;
+            height: 25px;
+            border-radius: 10px;
+        }
+
+        @keyframes lande {
+            0% {
+                left: -20%;
+                bottom: 0%;
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(-45deg);
+            }
+            100%{
+                left: 80%;
+                bottom: 0%;
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes lette {
+            0%{
+                left: 80%;
+                bottom: 0%;
+            }
+            100%{
+                left: 80%;
+                bottom: 500%;
+            }
+        }
+
+        #spacex{
+            position: absolute;
+            left: -10%;
+            bottom: 0%;
+        }
+        img{
+            width: 50px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="Bilder/rocket.png" alt="" id="spacex">
+<button id="lande">Lande</button>
+<button id="lette">Lette</button>
+
+<script>
+
+    let spacex = document.querySelector("#spacex");
+    let lande = document.querySelector("#lande");
+    let lette = document.querySelector("#lette");
+
+    lande.onclick = function () {
+        spacex.style.animation = "lande 5s forwards";
+    }
+
+    lette.onclick = function () {
+        spacex.style.animation = "lette 5s forwards";
+    }
+
+
+
+</script>
+
+</body>
+</html>

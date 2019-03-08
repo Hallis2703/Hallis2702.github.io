@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 3</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        #rotere{
+            margin-top: 200px;
+            margin-left: 40%;
+            position: absolute;
+        }
+        #tre{
+            margin-top: 300px;
+            position: absolute;
+        }
+        #blad{
+            width: 100px;
+            height: 100px;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btnStille">Stille</button>
+<button id="btnBris">Lett bris</button>
+<button id="btnKuling">Stiv Kuling</button>
+
+<div id="stamme"></div>
+<img src="vedlegg/rotere.png" id="rotere">
+
+<img src="vedlegg/Bjork.png" id="tre">
+
+<img src="vedlegg/blad.png" id="blad">
+
+
+<script>
+    let rotere = document.querySelector("#rotere");
+    let stamme = document.querySelector("#stamme");
+    let btnStille = document.querySelector("#btnStille");
+    let btnBris = document.querySelector("#btnBris");
+    let btnKuling = document.querySelector("#btnKuling");
+    let tre = document.querySelector("#tre");
+    let blad = document.querySelector("#blad");
+
+    let rotereCSS = [
+        {
+            transform: "rotate(0deg)"
+        },
+        {
+            transform: "rotate(1000deg)"
+        }
+    ];
+
+    let rotereEgenskaper = {
+        duration: 10000,
+        iterations: Infinity
+    };
+
+    let animasjonRotere = rotere.animate(rotereCSS, rotereEgenskaper);
+
+    let treCSS = [
+        {
+            transform: "rotate(-5deg)"
+        },
+        {
+            transform: "rotate(5deg)"
+        }
+    ];
+
+    treEgenskaper = {
+        duration: 10000,
+        iterations: Infinity,
+        easing: "ease-in-out"
+    };
+
+    let animasjonTre = tre.animate(treCSS, treEgenskaper);
+
+    let bladCSS = [
+        {
+            left: "-10%",
+            transform: "rotate(0deg)"
+        },
+        {
+            left: "150%",
+            transform: "rotate(1000deg)"
+        }
+    ];
+
+    let bladEgenskaper = {
+        duration: 10000,
+        iterations: Infinity
+    };
+
+    let animasjonBlad = blad.animate(bladCSS, bladEgenskaper);
+
+
+    btnStille.onclick = function () {
+        animasjonRotere.playbackRate = 0.2;
+        animasjonTre.playbackRate = 0.2;
+        animasjonBlad.playbackRate = 0.2;
+    }
+
+    btnBris.onclick = function () {
+        animasjonRotere.playbackRate = 1;
+        animasjonTre.playbackRate = 1;
+        animasjonBlad.playbackRate = 1;
+    }
+
+    btnKuling.onclick = function () {
+        animasjonRotere.playbackRate = 1.5;
+        animasjonTre.playbackRate = 1.5;
+        animasjonBlad.playbackRate = 1.5;
+    }
+
+
+</script>
+
+</body>
+</html>

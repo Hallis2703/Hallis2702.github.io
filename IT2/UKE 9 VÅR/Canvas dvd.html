@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas DVD-logo</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<canvas id="dvdCanvas" width="400px" height="200px"></canvas>
+
+<script>
+
+    //Referanser til HTML elementene
+    const dvdCanvas = document.querySelector("#dvdCanvas");
+    const ctx = dvdCanvas.getContext("2d");
+
+    //Globale variabler
+    let bakgrunnsfarge = "blue";
+
+    let figur1 = {
+        bredde: 100,
+        hoyde: 30,
+        xpos: 60,
+        ypos: 70,
+        farge: "lime",
+        xfart:10,
+        yfart:10,
+        xretning:1,
+        yretning:1
+    };
+
+    let figur2 = {
+        bredde: 200,
+        hoyde: 100,
+        xpos: 50,
+        ypos: 10,
+        farge: "red"
+    };
+
+    //Setup
+    gameLoop();
+
+    //ctx.fillStyle = figur1.farge;
+    //ctx.fillRect(figur1.xpos,figur1.ypos,figur1.bredde,figur1.hoyde);
+
+    //Funksjonsdefinisjoner
+    function gameLoop() {
+        clearCanvas();
+        tegnFirkant(figur1);
+        flyttFirkant(figur1);
+        requestAnimationFrame(gameLoop);
+    }
+
+    function tegnFirkant(firkant) {
+        ctx.fillStyle = firkant.farge;
+        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
+
+    }
+
+    function flyttFirkant(firkant) {
+        firkant.xpos += firkant.xpos + (firkant.xretning*firkant.xfart);
+        firkant.ypos += firkant.ypos + (firkant.yretning*firkant.yfart);
+
+    }
+
+    function clearCanvas() {
+        ctx.fillstyle = bakgrunnsfarge;
+        ctx.fillRect(0,0,dvdCanvas.width,dvdCanvas.height);
+    }
+
+
+
+
+</script>
+</body>
+</html>

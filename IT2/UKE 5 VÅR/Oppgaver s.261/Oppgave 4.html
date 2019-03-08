@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 4</title>
+</head>
+<body>
+
+<input type="text" id="grader" placeholder="GRADER">
+
+<div id="planke"></div>
+
+<script>
+
+    let planke = document.querySelector("#planke");
+    let inpGrader = document.querySelector("#grader");
+
+    planke.style.width = "200px";
+    planke.style.height = "50px";
+    planke.style.backgroundColor = "cadetblue";
+    planke.style.marginTop = "100px";
+    planke.style.marginLeft = "auto";
+    planke.style.marginRight = "auto";
+
+    inpGrader.oninput = function () {
+        planke.style.transform = `rotate(${inpGrader.value}deg)`;
+    }
+
+
+</script>
+
+</body>
+</html>

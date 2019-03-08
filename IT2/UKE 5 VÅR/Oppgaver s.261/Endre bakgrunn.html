@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endre bakgrunn</title>
+    <style>
+        body{
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="inp" placeholder="FARGE">
+
+<script>
+
+    let inp = document.getElementById("inp");
+
+    inp.oninput = function () {
+        document.body.style.backgroundColor = inp.value;
+    }
+
+</script>
+
+
+</body>
+</html>

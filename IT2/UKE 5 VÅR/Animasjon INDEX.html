@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasjon</title>¨
+    <style>
+        .container{
+            width: 700px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .container > .bilder > img{
+            width: 100%;
+        }
+        .container > .bilder:hover{
+            transform: scale(2); /* Klassen Bilder blir dobbelt så stor.*/
+        }
+        .container > .bilder{
+            transition: 0.2s 0.2s;
+            position: relative;
+        }
+        .container > .bilder > p{
+            position: absolute;
+            left: 3px;
+            top: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="bilder">
+        <img src="bilder/ung.jpg" alt="ungt bilde">
+        <p>Bilde av en ung gutt.</p>
+    </div>
+    <div class="bilder">
+        <img src="Bilder/passe.jpg" alt="passe bilde">
+        <p>Bilde av en som er passe gammel.</p>
+    </div>
+    <div class="bilder">
+        <img src="Bilder/gammel.jpg" alt="gammelt bilde">
+        <p>Bilde av en som er gammel.</p>
+    </div>
+</div>
+
+
+</body>
+</html>

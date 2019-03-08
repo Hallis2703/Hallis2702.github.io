@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilpresentasjon</title>
+    <style>
+        #ramme{
+            width: 950px;
+            height: 400px;
+            border-style: solid;
+        }
+        img{
+            width: 200px;
+        }
+        .bil{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="ramme">
+    <div id="slides">
+
+        <div class="bil">
+            <h1>HELT NY FORD KUGA</h1>
+            <img src="Bilder%20KUGA/kuga_front.jpg" alt="Bilde av bil" id="front">
+            <p id="tekstFront">Kraftig, sporty og enda mer elegant både innvendig og utvendig. Vi er stolte over å kunne lansere den helt nye Ford Kuga, vår mest kompetente SUV hittil. Nye Ford Kuga har blitt større og byr på den absolutt nyeste teknologien.</p>
+
+            <div class="bil">
+                <h2>Økonomi</h2>
+            <img src="Bilder%20KUGA/kuga_side.jpg" alt="Bilde av bil" id="side">
+            <p id="tekstSide">Det innovative Ford Eco Mode-systemet vurderer kontinuerlig effekten av din kjøreadferd på drivstofforbruket. Systemet leser hastighet, giring, bremsing og forventningsnivåene, pluss forholdet mellom korte og lange turer. Smart programvare gir deg så råd om hvordan du kan forbedre drivstofføkonomien i forhold til din personlige kjørestil.</p>
+            </div>
+
+            <div class="bil">
+                <h3>Kjøreegenskaper</h3>
+                <img src="Bilder%20KUGA/kuga_bak.jpg" alt="Bilde av bil" id="bak">
+            <p id="tekstBak">Kugas intelligente firehjulsdrift reagerer umiddelbart og justerer seg til skiftende underlag og kjøreforhold. Den sender nøyaktig riktig mengde effekt til det enkelte hjul som trenger mest veigrep. Og siden firehjulsdriften bare kobles inn ved behov, spares det drivstoff når underlaget er mindre krevende. Hvis du ønsker å se hva som skjer under hjulene dine i løpet av turen, vil en informasjonsskjerm for firehjulsdriften kontinuerlig vise - som et søylediagram - hvor mye effekt som sendes til hvert hjul.</p>
+
+            </div>
+            </div>
+    </div>
+</div>
+
+<script>
+
+    const slide = document.querySelector("#slides");
+
+
+    let slidesCSS = [
+        {
+            marginTop: "0px"
+        },
+        {
+            marginTop: "-800px"
+        }
+    ];
+
+    let egenskaper = {
+        duration:1500,
+        easing: "steps(3)",
+        iterations:Infinity
+    };
+
+    slides.animate(slidesCSS, egenskaper);
+
+
+
+
+</script>
+
+</body>
+</html>

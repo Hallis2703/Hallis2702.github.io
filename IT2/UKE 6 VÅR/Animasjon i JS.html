@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasjoner i JS</title>
+    <style>
+        img{
+            width: 150px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<img src="briller.png" alt="Bilde av Leah" id="bilde">
+
+<script>
+
+    const bilde = document.querySelector("#bilde");
+
+    let bildeCSS = [
+        {
+            left:"0px",
+            opacity:"1",
+            top:"0px"
+        },
+        {
+            left:"400px",
+            opacity:"0",
+            top:"400px"
+        }
+    ];
+
+    let bildeEgenskaper = {
+        duration: 2000,
+        easing: "ease-in-out",
+        iterations: 4,
+        direction: "alternate",
+        fill:"forwards"
+    };
+
+   bilde.animate(bildeCSS,bildeEgenskaper);
+
+
+
+</script>
+
+</body>
+</html>

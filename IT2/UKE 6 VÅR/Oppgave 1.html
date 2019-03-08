@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 1</title>
+    <style>
+        img{
+            width: 200px;
+            position: absolute;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="overskrift">HEI PÅ DEG</h1>
+
+<img src="Swastika_nazi.svg.png" alt="Bilde av Leah" id="bilde">
+
+<button id="pause">PAUSE</button>
+<button id="spill">SPILL</button>
+<button id="reverse">REVERSE</button>
+
+<input type="range" id="slider" min="o.1" max="3" step="0.1">
+
+<script>
+
+    let overskrift = document.querySelector("#overskrift");
+    let bilde = document.querySelector("#bilde");
+    let pause = document.querySelector("#pause");
+    let play = document.querySelector("#spill");
+    let reverse = document.querySelector("#reverse");
+    let slider = document.querySelector("#slider");
+
+    let egenskaper = {
+        duration: 3000,
+        easing: "ease-in-out",
+        direction:"alternate",
+        iterations: Infinity
+    } ;
+
+    let overskriftCSS = [
+        {
+            opacity:"0"
+        },
+        {
+            opacity:"1"
+        }
+    ];
+
+    overskrift.animate(overskriftCSS,egenskaper);
+
+    let bildeCSS = [
+        {
+           left:"0px",
+           transform: "rotate(0deg)"
+        },
+        {
+            left:"80%",
+            transform:"rotate(1000deg)"
+        }
+    ];
+
+   
+
+   let animasjon = bilde.animate(bildeCSS,egenskaper);
+
+
+    pause.onclick = function () {
+        animasjon.pause();
+    } ;
+    play.onclick = function () {
+        animasjon.play();
+    } ;
+    reverse.onclick = function () {
+        animasjon.reverse();
+    };
+
+    slider.onchange = function () {
+        animasjon.playbackRate = slider.value;
+
+    }
+
+</script>
+
+
+</body>
+</html>
