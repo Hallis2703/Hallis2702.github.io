@@ -4,43 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/IT2/UKE 6 VÅR/Oppgave 2.html" line="390" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b81da41f-8ee1-46d4-b5be-57e884dcd6c0" name="Default Changelist" comment="&#10;HELLO">
-      <change afterPath="$PROJECT_DIR$/IT2/Prosjekt_Spill.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/Prosjekt_Spill/INDEX.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/Prøve 15 februar/Oppgave 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/Prøve 15 februar/Oppgave 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/Prøve 15 februar/Oppgave 3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Animasjon INDEX.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Animasjon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Bilder/gammel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Bilder/passe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Bilder/rocket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Bilder/ung.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Bilder/universe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Eksamensoppgave.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Oppgave s.253/Oppgave 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Oppgave s.253/Oppgave 3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Oppgaver s.261/Endre bakgrunn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Oppgaver s.261/Oppgave 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 5 VÅR/Oppgaver s.261/Oppgave 4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Animasjon i JS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Animasjon_figur.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Animasjon_ninjakatt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Bilder KUGA/kuga_bak.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Bilder KUGA/kuga_front.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Bilder KUGA/kuga_side.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Bilpresentasjon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Oppgave 1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Oppgave 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/Swastika_nazi.svg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/briller.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/figur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 6 VÅR/ninjakatt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 9 VÅR/Canvas dvd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 9 VÅR/Cookie clicker.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IT2/UKE 9 VÅR/weird_face.png" afterDir="false" />
+    <list default="true" id="b81da41f-8ee1-46d4-b5be-57e884dcd6c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/IT2/Prosjekt_Spill/Snake.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT2/Prosjekt_Spill/INDEX.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,7 +22,7 @@
     <session id="1584263046">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="34" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -66,16 +33,16 @@
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="9" />
+          <entry key="project.open.time.8" value="10" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JPG" value="1" />
           <entry key="css" value="27" />
-          <entry key="html" value="258" />
+          <entry key="html" value="260" />
           <entry key="jpg" value="5" />
           <entry key="js" value="12" />
           <entry key="png" value="13" />
@@ -85,7 +52,7 @@
         <counts>
           <entry key="CSS" value="27" />
           <entry key="Enforced Plain Text" value="3" />
-          <entry key="HTML" value="255" />
+          <entry key="HTML" value="257" />
           <entry key="Image" value="19" />
           <entry key="JavaScript" value="12" />
         </counts>
@@ -93,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2139" />
-          <entry key="html" value="55815" />
+          <entry key="html" value="57380" />
           <entry key="js" value="1028" />
           <entry key="txt" value="14" />
         </counts>
@@ -102,7 +69,7 @@
         <counts>
           <entry key="CSS" value="2139" />
           <entry key="Enforced Plain Text" value="665" />
-          <entry key="HTML" value="55150" />
+          <entry key="HTML" value="56715" />
           <entry key="JavaScript" value="1028" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
@@ -116,17 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Snake.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-331">
-              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="64">
+              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -134,17 +92,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IT2/UKE 9 VÅR/Canvas dvd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="795">
               <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IT2/Prosjekt_Spill/INDEX.html">
+        <entry file="file://$PROJECT_DIR$/IT2/Prosjekt_Spill/Snake.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+            <state relative-caret-position="1318">
+              <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -171,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IT2/Heldagsprøve 14. desember/Oppgave 5.css" />
         <option value="$PROJECT_DIR$/IT2/Heldagsprøve 14. desember/Oppgave 5 MDG.html" />
         <option value="$PROJECT_DIR$/IT2/Heldagsprøve 14. desember/MDG.html" />
         <option value="$PROJECT_DIR$/IT2/Heldagsprøve 14. desember/Oppgave 5/SP.html" />
@@ -222,6 +188,7 @@
         <option value="$PROJECT_DIR$/IT2/UKE 9 VÅR/Canvas dvd.html" />
         <option value="$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html" />
         <option value="$PROJECT_DIR$/IT2/Prosjekt_Spill/INDEX.html" />
+        <option value="$PROJECT_DIR$/IT2/Prosjekt_Spill/Snake.html" />
       </list>
     </option>
   </component>
@@ -241,7 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,16 +220,11 @@
               <item name="Hallis2702.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="IT2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Hallis2702.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hallis2702.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="IT2" type="462c0819:PsiDirectoryNode" />
-              <item name="UKE 9 VÅR" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,7 +309,8 @@
       <workItem from="1549611657172" duration="9956000" />
       <workItem from="1550216044327" duration="8141000" />
       <workItem from="1551425600294" duration="4455000" />
-      <workItem from="1552031294123" duration="3983000" />
+      <workItem from="1552031294123" duration="4040000" />
+      <workItem from="1552635499031" duration="6470000" />
     </task>
     <task id="LOCAL-00001" summary="Hei">
       <created>1534500083893</created>
@@ -518,11 +480,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548419118269</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="&#10;HELLO">
+      <created>1552049980340</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1552049980340</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176359000" />
+    <option name="totallyTimeSpent" value="182886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="710" extended-state="0" />
@@ -603,20 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/UKE 4 VÅR/Index_nodelist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/UKE 4 VÅR/Stjernehimmel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -835,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Snake.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IT2/Prøve 15 februar/Oppgave 2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -858,22 +806,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/UKE 9 VÅR/Canvas dvd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
+        <state relative-caret-position="795">
           <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/UKE 4 VÅR/Stjernehimmel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/UKE 4 VÅR/Index_nodelist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Pong.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/Prosjekt_Spill/INDEX.html">
+    <entry file="file://$PROJECT_DIR$/IT2/Prosjekt/Hovedside/Snake.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+        <state relative-caret-position="64">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/Prosjekt_Spill/Snake.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1318">
+          <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
         </state>
       </provider>
     </entry>

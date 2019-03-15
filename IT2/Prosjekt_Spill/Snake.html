@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        canvas{
+            border: solid 3px red;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="mittCanvas" width="300px" height="400px"></canvas>
+
+<script>
+
+    const mittCanvas = document.querySelector("#mittCanvas");
+    const ctx = mittCanvas.getContext(`2d`);
+
+    //Globale variabler
+
+    let slange = {
+        bredde: 20,
+        hoyde: 20,
+        xpos: 100,
+        ypos: 100,
+        farge: "lime",
+        xfart:7,
+        yfart:7,
+        xretning:0,
+        yretning:1
+    };
+
+    let eple = {
+        bredde:20,
+        hoyde:20,
+        xpos:250,
+        ypos:250,
+        farge:"red"
+    };
+
+    mittCanvas.width = window.innerWidth;
+    mittCanvas.height = window.innerHeight;
+
+    let bane = {
+        bredde: mittCanvas.width,
+        hoyde: mittCanvas.height,
+        farge: "dimgrey"
+    };
+
+    //Setup
+
+    gameLoop();
+
+
+    //Funksjonsdefinisjoner
+
+    function gameLoop() {
+        tegnBane();
+        tegnSlange(slange);
+        sjekkMat();
+        //tegnEple(eple);
+        slangeTreffeVegg();
+        requestAnimationFrame(gameLoop);
+    }
+
+    function tegnBane() {
+        ctx.fillStyle = bane.farge;
+        ctx.fillRect(0,0,bane.bredde,bane.hoyde);
+    }
+
+    function tegnSlange(firkant) {
+        ctx.fillStyle = firkant.farge;
+        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
+        firkant.xpos = firkant.xpos + firkant.xfart * firkant.xretning;
+        firkant.ypos = firkant.ypos + firkant.yfart * firkant.yretning;
+    }
+    function sjekkMat() {
+        if (eple.xpos > slange.xpos && eple.xpos < slange.xpos + slange.bredde && eple.ypos > slange.ypos + slange.hoyde){
+            tegnEple(eple);
+        }
+    }
+
+    function tegnEple (figur){
+        figur.xpos = Math.random()*bane.bredde;
+        figur.ypos = Math.random()*bane.hoyde;
+        ctx.fillStyle = figur.farge;
+        ctx.fillRect(figur.xpos, figur.ypos, figur.bredde, figur.hoyde);
+    }
+    
+    function slangeTreffeVegg () {
+        if (slange.xpos < slange.bredde){
+            slange.xfart = 0;
+            alert("GAME OVER");
+            location.reload();
+        }
+        if (slange.xpos + slange.bredde > bane.bredde) {
+            slange.xfart = 0;
+            alert("GAME OVER");
+            location.reload();
+        }
+        if (slange.ypos < slange.hoyde){
+            slange.yfart = 0;
+            alert("GAME OVER");
+            location.reload();
+        }
+        if (slange.ypos + slange.hoyde > bane.hoyde){
+            slange.yfart = 0;
+            alert("GAME OVER");
+            location.reload();
+        }
+    }
+
+    document.onkeydown = function (evt) {
+        let tastekode = evt.keyCode;
+        if (tastekode === 37){
+            slange.xretning = -1;
+            slange.yretning = 0;
+        }
+        if (tastekode === 39){
+            slange.xretning = 1;
+            slange.yretning = 0;
+        }
+        if (tastekode === 38){
+            slange.yretning = -1;
+            slange.xretning = 0;
+        }
+        if (tastekode === 40){
+            slange.yretning = 1;
+            slange.xretning = 0;
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
