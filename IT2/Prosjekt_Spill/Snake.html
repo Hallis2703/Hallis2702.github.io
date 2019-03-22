@@ -9,26 +9,45 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            background-color: black;
         }
         canvas{
             border: solid 3px red;
+            position: center;
+        }
+        button{
+            padding: 20px;
+            border-radius: 12%;
+        }
+        div{
+            color: white;
         }
     </style>
 </head>
 <body>
 
-<canvas id="mittCanvas" width="300px" height="400px"></canvas>
+<div id="divPoeng">
+    <h1 id="poeng">POENG:0</h1>
+</div>
+
+<canvas id="mittCanvas" width="608px" height="608px"></canvas>
+<br>
+<button id="btn">RESTART</button>
 
 <script>
 
     const mittCanvas = document.querySelector("#mittCanvas");
     const ctx = mittCanvas.getContext(`2d`);
+    let btn = document.querySelector("#btn");
+    let divPoeng = document.querySelector("#divPoeng");
+    let poeng = document.querySelector("#poeng");
+    let i = 0;
 
     //Globale variabler
 
     let slange = {
-        bredde: 20,
-        hoyde: 20,
+        bredde: 30,
+        hoyde: 30,
         xpos: 100,
         ypos: 100,
         farge: "lime",
@@ -39,15 +58,14 @@
     };
 
     let eple = {
-        bredde:20,
-        hoyde:20,
+        bredde:30,
+        hoyde:30,
         xpos:250,
         ypos:250,
         farge:"red"
     };
 
-    mittCanvas.width = window.innerWidth;
-    mittCanvas.height = window.innerHeight;
+
 
     let bane = {
         bredde: mittCanvas.width,
@@ -60,13 +78,14 @@
     gameLoop();
 
 
+
     //Funksjonsdefinisjoner
 
     function gameLoop() {
         tegnBane();
-        tegnSlange(slange);
+        tegnEple();
+        tegnSlange();
         sjekkMat();
-        //tegnEple(eple);
         slangeTreffeVegg();
         requestAnimationFrame(gameLoop);
     }
@@ -76,67 +95,81 @@
         ctx.fillRect(0,0,bane.bredde,bane.hoyde);
     }
 
-    function tegnSlange(firkant) {
-        ctx.fillStyle = firkant.farge;
-        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
-        firkant.xpos = firkant.xpos + firkant.xfart * firkant.xretning;
-        firkant.ypos = firkant.ypos + firkant.yfart * firkant.yretning;
+    function tegnSlange() {
+        ctx.fillStyle = slange.farge;
+        ctx.fillRect(slange.xpos,slange.ypos,slange.bredde,slange.hoyde);
+        slange.xpos = slange.xpos + slange.xfart * slange.xretning;
+        slange.ypos = slange.ypos + slange.yfart * slange.yretning;
     }
     function sjekkMat() {
-        if (eple.xpos > slange.xpos && eple.xpos < slange.xpos + slange.bredde && eple.ypos > slange.ypos + slange.hoyde){
-            tegnEple(eple);
-        }
-    }
 
-    function tegnEple (figur){
-        figur.xpos = Math.random()*bane.bredde;
-        figur.ypos = Math.random()*bane.hoyde;
-        ctx.fillStyle = figur.farge;
-        ctx.fillRect(figur.xpos, figur.ypos, figur.bredde, figur.hoyde);
-    }
-    
-    function slangeTreffeVegg () {
-        if (slange.xpos < slange.bredde){
-            slange.xfart = 0;
-            alert("GAME OVER");
-            location.reload();
-        }
-        if (slange.xpos + slange.bredde > bane.bredde) {
-            slange.xfart = 0;
-            alert("GAME OVER");
-            location.reload();
-        }
-        if (slange.ypos < slange.hoyde){
-            slange.yfart = 0;
-            alert("GAME OVER");
-            location.reload();
-        }
-        if (slange.ypos + slange.hoyde > bane.hoyde){
-            slange.yfart = 0;
-            alert("GAME OVER");
-            location.reload();
-        }
-    }
+        //if (eple.xpos > slange.xpos && eple.xpos < slange.xpos + slange.bredde && eple.ypos > slange.ypos + slange.hoyde){
+        //eple.xpos = Math.random()*bane.bredde;
+        //eple.ypos = Math.random()*bane.hoyde;
 
-    document.onkeydown = function (evt) {
-        let tastekode = evt.keyCode;
-        if (tastekode === 37){
-            slange.xretning = -1;
-            slange.yretning = 0;
+        if (slange.xpos < eple.xpos + eple.bredde && slange.xpos + slange.bredde > eple.xpos
+            && slange.ypos < eple.ypos + eple.hoyde && slange.ypos + slange.hoyde > eple.ypos) {
+            eple.xpos = Math.floor(Math.random() * bane.bredde);
+            eple.ypos = Math.floor(Math.random() * bane.hoyde);
+            poeng.innerHTML = "POENG:" + i++;
         }
-        if (tastekode === 39){
-            slange.xretning = 1;
-            slange.yretning = 0;
         }
-        if (tastekode === 38){
-            slange.yretning = -1;
-            slange.xretning = 0;
+
+
+        function tegnEple() {
+            //eple.xpos = Math.random()*bane.bredde;
+            //eple.ypos = Math.random()*bane.hoyde;
+            ctx.fillStyle = eple.farge;
+            ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde);
         }
-        if (tastekode === 40){
-            slange.yretning = 1;
-            slange.xretning = 0;
+
+        function slangeTreffeVegg() {
+            if (slange.xpos + slange.bredde < slange.bredde) {
+                slange.xfart = 0;
+                slange.yfart = 0;
+
+            }
+            if (slange.xpos + slange.bredde > bane.bredde) {
+                slange.xfart = 0;
+                slange.yfart = 0;
+            }
+            if (slange.ypos + slange.hoyde < slange.hoyde) {
+                slange.yfart = 0;
+                slange.xfart = 0;
+            }
+            if (slange.ypos + slange.hoyde > bane.hoyde) {
+                slange.yfart = 0;
+                slange.xfart = 0;
+            }
         }
-    }
+        
+
+        btn.onclick = function () {
+            location.reload();
+        }
+
+
+
+        document.onkeydown = function (evt) {
+            let tastekode = evt.keyCode;
+            if (tastekode === 37) {
+                slange.xretning = -1;
+                slange.yretning = 0;
+            }
+            if (tastekode === 39) {
+                slange.xretning = 1;
+                slange.yretning = 0;
+            }
+            if (tastekode === 38) {
+                slange.yretning = -1;
+                slange.xretning = 0;
+            }
+            if (tastekode === 40) {
+                slange.yretning = 1;
+                slange.xretning = 0;
+            }
+        }
+
 
 
 
