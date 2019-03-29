@@ -91,43 +91,41 @@
     }
 
     function tegnBane() {
-        ctx.fillStyle = bane.farge;
-        ctx.fillRect(0,0,bane.bredde,bane.hoyde);
+        //Her tegner man banen.
+        ctx.fillStyle = bane.farge; //Legger til farge.
+        ctx.fillRect(0,0,bane.bredde,bane.hoyde); // Bestemmer hvor i hvilket punkt banen starter og bredde og høyden.
     }
 
     function tegnSlange() {
-        ctx.fillStyle = slange.farge;
-        ctx.fillRect(slange.xpos,slange.ypos,slange.bredde,slange.hoyde);
-        slange.xpos = slange.xpos + slange.xfart * slange.xretning;
-        slange.ypos = slange.ypos + slange.yfart * slange.yretning;
+        //Her tegner vi slangen.
+        ctx.fillStyle = slange.farge; //Legger til farge.
+        ctx.fillRect(slange.xpos,slange.ypos,slange.bredde,slange.hoyde); //Tegner slangen og bestemmer hvor den starter og bredde og hoyden.
+        slange.xpos = slange.xpos + slange.xfart * slange.xretning; //Her bestemmer vi at den beveger seg horisontalt.
+        slange.ypos = slange.ypos + slange.yfart * slange.yretning; //Her bestemmer vi at den beveger seg på y-aksen.
     }
     function sjekkMat() {
-
-        //if (eple.xpos > slange.xpos && eple.xpos < slange.xpos + slange.bredde && eple.ypos > slange.ypos + slange.hoyde){
-        //eple.xpos = Math.random()*bane.bredde;
-        //eple.ypos = Math.random()*bane.hoyde;
-
+        //Her sørger vi for at slangen kolliderer ned eplene.
         if (slange.xpos < eple.xpos + eple.bredde && slange.xpos + slange.bredde > eple.xpos
             && slange.ypos < eple.ypos + eple.hoyde && slange.ypos + slange.hoyde > eple.ypos) {
-            eple.xpos = Math.floor(Math.random() * bane.bredde);
-            eple.ypos = Math.floor(Math.random() * bane.hoyde);
-            poeng.innerHTML = "POENG:" + i++;
+            //Lager en if-setning som bestemmer når slangen kolliderer med eple.
+            eple.xpos = Math.floor(Math.random() * bane.bredde); //Bestemmer hvilke steder eple skal spawne etter kollisjon.
+            eple.ypos = Math.floor(Math.random() * bane.hoyde); // Bestemmer hvilke steder eple skal spawne etter kollisjon.
+            poeng.innerHTML = "POENG:" + i++; //Legger til poeng når slangen kolliderer med eple.
         }
         }
 
 
         function tegnEple() {
-            //eple.xpos = Math.random()*bane.bredde;
-            //eple.ypos = Math.random()*bane.hoyde;
-            ctx.fillStyle = eple.farge;
-            ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde);
+        // Her tegner vi eplet.
+            ctx.fillStyle = eple.farge; // Legger til farge.
+            ctx.fillRect(eple.xpos, eple.ypos, eple.bredde, eple.hoyde); //Tegner eple.
         }
 
         function slangeTreffeVegg() {
+        //Her sjekker vi om slangen kolliderer med veggene.
             if (slange.xpos + slange.bredde < slange.bredde) {
                 slange.xfart = 0;
                 slange.yfart = 0;
-
             }
             if (slange.xpos + slange.bredde > bane.bredde) {
                 slange.xfart = 0;
@@ -145,12 +143,14 @@
         
 
         btn.onclick = function () {
+        //Gjør slik at når man trykker på knappen, reloader siden.
             location.reload();
         }
 
 
 
         document.onkeydown = function (evt) {
+        // Legger til slik at man kan styre slangen med piltastene.
             let tastekode = evt.keyCode;
             if (tastekode === 37) {
                 slange.xretning = -1;
